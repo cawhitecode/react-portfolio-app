@@ -1,64 +1,212 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import 'animate.css';
+import { IconCard } from "./IconCard";
+
+import typeScriptIcon from "../assets/img/typescript-icon.svg";
+import javaScriptIcon from "../assets/img/javascript-icon.svg";
+import pythonIcon from "../assets/img/python-icon.svg";
+import goIcon from "../assets/img/go-icon.svg";
+import postgreSQLIcon from "../assets/img/postgresql-icon.svg";
+import csharpIcon from "../assets/img/c-icon.svg";
+import monogoDBIcon from "../assets/img/mongodb-icon-1.svg";
+import javaIcon from "../assets/img/java-icon.svg";
+
+import nodeJsIcon from "../assets/img/nodejs-icon.svg";
+import nestJsIcon from "../assets/img/nestjs.svg";
+import reactJsIcon from "../assets/img/react-2.svg";
+import expressJsIcon from "../assets/img/express-icon.svg";
+import typeOrmIcon from "../assets/img/typeorm-icon.png";
+import flaskIcon from "../assets/img/flask-icon.png";
+import terraformIcon from "../assets/img/terraform-icon.png";
+import prometheusIcon from "../assets/img/prometheus.svg";
+
+import awsIcon from "../assets/img/aws-2.svg";
+import dockerIcon from "../assets/img/docker.svg";
+import kubernetsIcon from "../assets/img/kubernets.svg";
+import grafanaIcon from "../assets/img/grafana.svg";
+import postmanIcon from "../assets/img/postman.svg";
+import visualStudioCodeIcon from "../assets/img/visual-studio-code-1.svg";
+import gitIcon from "../assets/img/git-icon.svg";
+import jiraIcon from "../assets/img/jira-1.svg";
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
+
+  const skills = [
+    {
+      title: "TypeScript",
+      icon: typeScriptIcon,
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
+    {
+      
+      title: "JavaScript",
+      icon: javaScriptIcon,
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
+    {
+      title: "Python",
+      icon: pythonIcon,
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
+    {
+      title: "Go",
+      icon: goIcon,
+    },
+    {
+      title: "PostgreSQL",
+      icon: postgreSQLIcon,
+    },
+    {
+      title: "C#",
+      icon: csharpIcon,
+    },
+    {
+      title: "MongoDB",
+      icon: monogoDBIcon,
+    },
+    {
+      title: "Java",
+      icon: javaIcon,
+    },
+  ];
+
+  const frameworks = [
+    {
+      
+      title: "NodeJS",
+      icon: nodeJsIcon,
+    },
+    {
+      title: "NestJS",
+      icon: nestJsIcon,
+    },
+    {
+      title: "React",
+      icon: reactJsIcon,
+    },
+    {
+      title: "ExpressJS",
+      icon: expressJsIcon,
+    },
+    {
+      title: "TypeOrm",
+      icon: typeOrmIcon,
+    },
+    {
+      title: "Flask",
+      icon: flaskIcon,
+    },
+    {
+      title: "Terraform",
+      icon: terraformIcon,
+    },
+    {
+      title: "Prometheus",
+      icon: prometheusIcon,
     }
-  };
+  ];
+
+  const tools = [
+    {
+      
+      title: "AWS",
+      icon: awsIcon,
+    },
+    {
+      title: "Docker",
+      icon: dockerIcon,
+    },
+    {
+      title: "Kubernetes",
+      icon: kubernetsIcon,
+    },
+    {
+      title: "Grafana",
+      icon: grafanaIcon,
+    },
+    {
+      title: "Postman",
+      icon: postmanIcon,
+    },
+    {
+      title: "Visual Studio Code",
+      icon: visualStudioCodeIcon,
+    },
+    {
+      title: "Git",
+      icon: gitIcon,
+    },
+    {
+      title: "Jira",
+      icon: jiraIcon,
+    },
+  ];
 
   return (
-    <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>About Skills</h2>
-                        <p>I have learned different programming languages ​​so far and as far as my skills are concerned<br></br></p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>English</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+    <section className="projects" id="skills">
+      <Container>
+        <Row>
+          <Col size={12}>
+                <h2>Skills</h2>
+                <Tab.Container id="languages-tabs" defaultActiveKey="first">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">Languages</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">Tools</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">Frameworks</Nav.Link>
+                    </Nav.Item> 
+                  </Nav>
+                  <Tab.Content id="slideInUp">
+                    <Tab.Pane eventKey="first">
+                      <Row>
+                        {
+                          skills.map((skill, index) => {
+                            return (
+                              <IconCard
+                                key={index}
+                                {...skill}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                    <Row>
+                        {
+                          tools.map((tool, index) => {
+                            return (
+                              <IconCard
+                                key={index}
+                                {...tool}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                    <Row>
+                        {
+                          frameworks.map((framework, index) => {
+                            return (
+                              <IconCard
+                                key={index}
+                                {...framework}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
+          </Col>
+        </Row>
+      </Container>
+      <img className="background-image-right" src={colorSharp2}></img>
     </section>
   )
 }
