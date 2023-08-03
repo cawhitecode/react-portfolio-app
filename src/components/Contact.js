@@ -15,7 +15,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
                 <div>
                 <h2>Have a question or want to work together?</h2>
-                <h4>cawhite.business@gmail.com</h4>
+                <h4>info@cawhite.dev</h4>
                </div>
           </Col>
         </Row>
