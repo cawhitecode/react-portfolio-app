@@ -7,7 +7,7 @@ import typeScriptIcon from "../assets/img/typescript-icon.svg";
 import javaScriptIcon from "../assets/img/javascript-icon.svg";
 import pythonIcon from "../assets/img/python-icon.svg";
 import goIcon from "../assets/img/go-icon.svg";
-import postgreSQLIcon from "../assets/img/postgresql-icon.svg";
+import postgreSQLIcon from "../assets/img/postgresql-icon.png";
 import csharpIcon from "../assets/img/c-icon.svg";
 import monogoDBIcon from "../assets/img/mongodb-icon-1.svg";
 import javaIcon from "../assets/img/java-icon.svg";
@@ -27,7 +27,7 @@ import kubernetsIcon from "../assets/img/kubernets.svg";
 import grafanaIcon from "../assets/img/grafana.svg";
 import postmanIcon from "../assets/img/postman.svg";
 import visualStudioCodeIcon from "../assets/img/visual-studio-code-1.svg";
-import gitIcon from "../assets/img/git-icon.svg";
+import gitIcon from "../assets/img/git-icon.png";
 import jiraIcon from "../assets/img/jira-1.svg";
 
 export const Skills = () => {
